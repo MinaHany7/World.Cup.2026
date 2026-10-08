@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07120c">
+  <meta name="description" content="A concise, visual analyst report on the 2026 FIFA World Cup: tournament signals, standout players and recruitment questions.">
+  <meta property="og:title" content="World Cup 2026 — The Analyst's Matchday Report">
+  <meta property="og:description" content="48 nations. 104 matches. One clear late-game signal. An analyst report by Mina Hany Wahba.">
+  <meta property="og:type" content="website">
+  <title>World Cup 2026 — The Analyst's Matchday Report</title>
+  <link rel="icon" href="assets/img/ball-mark.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/stadium-walkout.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/report.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="assets/css/showcase.css">
+  <script defer src="assets/data/tournament-data.js"></script>
+  <script defer src="assets/js/report.js"></script>
+  <script defer src="assets/js/showcase.js"></script>
+</head>
+<body>
+  <section class="entry-screen" id="entryScreen" aria-label="Stadium entrance">
+    <div class="entry-background" aria-hidden="true"></div>
+    <div class="entry-vignette" aria-hidden="true"></div>
+    <div class="entry-floodlight entry-floodlight-one" aria-hidden="true"></div>
+    <div class="entry-floodlight entry-floodlight-two" aria-hidden="true"></div>
+    <div class="entry-gate entry-gate-left" aria-hidden="true"></div>
+    <div class="entry-gate entry-gate-right" aria-hidden="true"></div>
+    <img class="walkout-player" src="assets/img/walkout-player.webp" alt="" aria-hidden="true">
+    <div class="walkout-ball" aria-hidden="true">
+      <svg viewBox="0 0 100 100" role="presentation"><circle cx="50" cy="50" r="46"/><path d="m50 29 13 9-5 16H42l-5-16 13-9Zm0 0V5m13 33 23-8M58 54l15 19m-30-19L28 73m9-35-23-8m28 24-2 26 13 13 13-13-3-26"/></svg>
+    </div>
+    <div class="entry-content">
+      <p class="entry-kicker"><span class="live-dot"></span> 2026 WORLD CUP <i>/</i> ANALYST'S REPORT</p>
+      <h1>LIGHTS.<br><em>NOISE.</em><br>NUMBERS.</h1>
+      <p class="entry-subtitle">A stadium-sized story, told in the numbers that mattered.</p>
+      <button class="entry-button" id="enterButton" type="button"><span>ENTER THE STADIUM</span><b aria-hidden="true">↗</b></button>
+      <button class="entry-skip" id="skipIntro" type="button">SKIP WALKOUT</button>
+    </div>
+    <div class="entry-bottom"><span>48 NATIONS · 104 MATCHES · ONE CHAMPION</span><span>MINA HANY WAHBA <b>·</b> DATA ANALYST</span></div>
+    <div class="entry-progress" aria-hidden="true"><span></span></div>
+  </section>
+
+  <main class="report" id="report" hidden>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="World Cup 2026 report home">
+        <span class="brand-ball" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44"/><path d="m50 31 12 9-5 15H43l-5-15 12-9Zm0 0V7m12 33 22-8M57 55l15 18m-29-18L28 73m10-33-22-8m28 26-2 24 8 10 8-10-2-24"/></svg></span>
+        <span class="brand-copy"><b>THE DATA ROOM</b><small>WORLD CUP 2026</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Report sections">
+        <a href="#snapshot">THE READ</a><a href="#competition">THE TOURNAMENT</a><a href="#records">RECORDS</a><a href="#scouting">PLAYERS</a><a href="#outlook">THE OUTLOOK</a><a href="#project">PROJECT</a>
+      </nav>
+      <a class="header-cta" href="#project">WATCH THE DASHBOARD <span>↗</span></a>
+    </header>
+
+    <section class="report-hero" id="top">
+      <div class="hero-art" aria-hidden="true"><img src="assets/img/trophy-and-ball.webp" alt=""></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span>POST-TOURNAMENT BRIEF</span><i>·</i> CANADA / MEXICO / USA</p>
+        <h2>THE WORLD CUP.<br><em>IN THE NUMBERS.</em></h2>
+        <p class="hero-lede">A sharp read on the title race, the late-game swing and the players worth a second look.</p>
+        <div class="champion-line">
+          <img id="championFlag" src="assets/flags/es.png" alt="Spain flag">
+          <div><small>WORLD CHAMPIONS</small><strong id="championName">SPAIN</strong></div>
+          <div class="hero-final-score"><small>THE FINAL</small><b><span id="finalHome">ESP</span> 1 <i>—</i> 0 <span id="finalAway">ARG</span></b><small>AFTER EXTRA TIME</small></div>
+        </div>
+        <a class="hero-link" href="#snapshot">READ THE EXECUTIVE BRIEF <span>↓</span></a>
+      </div>
+      <div class="hero-stamp"><span>FIFA WORLD CUP</span><b>2026</b><i>FINAL REPORT</i></div>
+      <div class="hero-ball-mark" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/><path d="m50 29 13 9-5 16H42l-5-16 13-9Zm0 0V5m13 33 23-8M58 54l15 19m-30-19L28 73m9-35-23-8m28 24-2 26 13 13 13-13-3-26"/></svg></div>
+      <div class="hero-edge"><span>THE ANALYST'S MATCHDAY REPORT</span><span>01 <i>/</i> 06</span></div>
+    </section>
+
+    <section class="report-section snapshot-section" id="snapshot">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span>01</span> THE EXECUTIVE READ</p><h2>THE SHORT VERSION.</h2></div>
+        <p class="section-deck">Four numbers. Three calls. The details stay in the workbook.</p>
+      </div>
+      <div class="stat-grid" id="statGrid" aria-label="Tournament key figures"></div>
+      <div class="signal-layout">
+        <div class="signal-copy">
+          <p class="eyebrow"><span>THE LATE SHIFT</span></p>
+          <h3>THE LAST 15<br><em>CHANGED GAMES.</em></h3>
+          <p><strong id="lateGoalStat">81 goals · 26.3%</strong> of every goal in the dataset landed in the 76–90 minute window.</p>
+          <div class="analyst-tag"><span>ANALYST'S READ</span><b>Prepare the bench before the 75th minute.</b></div>
+        </div>
+        <div class="chart-panel">
+          <div class="chart-title"><span>GOALS BY MATCH PHASE</span><small>308 TOTAL</small></div>
+          <div class="goal-chart" id="goalChart" role="img" aria-label="Goals by time interval"></div>
+          <div class="chart-note">The 76–90 interval was the tournament's biggest scoring window.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="competition-section" id="competition">
+      <div class="section-heading section-heading-light">
+        <div><p class="eyebrow"><span>02</span> THE TOURNAMENT</p><h2>CONTROL BEAT<br><em>CHAOS AT THE TOP.</em></h2></div>
+        <p class="section-deck">A one-goal final. A champion that conceded once in eight matches.</p>
+      </div>
+      <div class="competition-grid">
+        <article class="champion-card">
+          <div class="champion-card-image"><img src="assets/img/trophy-and-ball.webp" alt="Generic gold football trophy and football on a lit pitch" loading="lazy"><span class="image-caption">THE PRIZE · THE GAME</span></div>
+          <div class="champion-card-copy"><p class="eyebrow">THE CHAMPION'S ROUTE</p><h3>SPAIN</h3><p class="champion-summary">Eight matches. <b>14 scored.</b> Just <b>1 conceded.</b></p><div class="champion-result"><span>FINAL</span><b>1 — 0</b><span>ARGENTINA</span><small>AFTER EXTRA TIME</small></div></div>
+        </article>
+        <div class="team-chart-panel">
+          <div class="chart-title"><span>THE FINAL FOUR · GOALS FOR / AGAINST</span><small>FULL TOURNAMENT</small></div>
+          <div id="teamChart" class="team-chart"></div>
+          <div class="chart-legend"><span><i class="legend-for"></i> SCORED</span><span><i class="legend-against"></i> CONCEDED</span></div>
+          <p class="analyst-note"><b>READ:</b> Spain's 14–1 record produced the best goal difference among the final four. England and France each scored 20, but did not reach the final.</p>
+        </div>
+      </div>
+      <div class="record-strip" id="recordStrip"></div>
+    </section>
+
+    <section class="records-section" id="records">
+      <div class="section-heading section-heading-light">
+        <div><p class="eyebrow"><span>03</span> THE RECORD BOOK</p><h2>THE NUMBERS<br><em>THAT MADE HISTORY.</em></h2></div>
+        <p class="section-deck">Records fell across the pitch, the stands and the history books.</p>
+      </div>
+      <p class="records-intro"><strong>12 milestones.</strong> A new scoring high, a record crowd and individual feats that reset the benchmark.</p>
+      <div class="record-grid" id="recordGrid" aria-label="World Cup 2026 records"></div>
+      <p class="records-source-note">Tournament-scale records are from FIFA’s final review. Individual milestones are linked to FIFA’s official record report and Guinness World Records.</p>
+    </section>
+
+    <section class="report-section scouting-section" id="scouting">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span>04</span> TALENT WATCH</p><h2>PLAYERS WHO<br><em>MOVED THE STORY.</em></h2></div>
+        <p class="section-deck">Standout output, breakout moments and records. <b>Selected stories, not a ranking.</b></p>
+      </div>
+      <div class="scout-grid" id="scoutGrid"></div>
+      <div class="scout-footer"><span>15 PLAYER STORIES · GOALS, ASSISTS &amp; MATCH IMPACT</span><span>CLICK ANY PLAYER FOR A QUICK READ ↗</span></div>
+    </section>
+
+    <section class="outlook-section" id="outlook">
+      <div class="outlook-backdrop" aria-hidden="true"></div>
+      <div class="outlook-heading"><p class="eyebrow"><span>05</span> THE ANALYST'S OUTLOOK</p><h2>WHAT TO TAKE<br><em>INTO THE NEXT CYCLE.</em></h2><p>Not a score prediction. A shortlist of decisions the data supports.</p></div>
+      <div class="outlook-grid">
+        <article class="outlook-card"><span class="outlook-number">01</span><div><h3>PLAN LATE-GAME OPTIONS.</h3><p>81 goals arrived in minutes 76–90. Test substitutes and endurance under pressure.</p></div><b class="outlook-proof">26.3%</b></article>
+        <article class="outlook-card"><span class="outlook-number">02</span><div><h3>PLAN FOR EXTRA TIME.</h3><p>Nearly one in three knockout fixtures ran beyond 90 minutes. Squad depth matters.</p></div><b class="outlook-proof">9 / 32</b></article>
+        <article class="outlook-card"><span class="outlook-number">03</span><div><h3>SCOUT OUTPUT IN CONTEXT.</h3><p>Goals and assists trigger video review—not a valuation or a per-90 ranking.</p></div><b class="outlook-proof">U23</b></article>
+      </div>
+      <p class="outlook-caveat">NEXT STEP: validate minutes, role, chance quality, medical and contract data before any recruitment decision.</p>
+    </section>
+
+    <section class="report-section project-section" id="project">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span>06</span> THE PROJECT FILE</p><h2>FROM DASHBOARD<br><em>TO DECISION.</em></h2></div>
+        <p class="section-deck">The complete Power BI report and the source workbook are here.</p>
+      </div>
+      <div class="project-grid">
+        <article class="video-card">
+          <div class="card-topline"><span>POWER BI WALKTHROUGH</span><span>07:09</span></div>
+          <video id="projectVideo" controls playsinline webkit-playsinline preload="metadata" poster="assets/img/video-poster.webp" aria-label="World Cup Power BI project walkthrough"><source src="assets/video/World_Cup_2026_Walkthrough.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+          <p>56-page Power BI report · tournament overview, match analysis and player potential.</p>
+          <div class="video-fallback"><a href="assets/video/World_Cup_2026_Walkthrough.mp4" target="_blank" rel="noreferrer">VIDEO NOT PLAYING? OPEN IT DIRECTLY ↗</a></div>
+          <div class="project-toolkit" aria-label="Project tools"><span>PROJECT TOOLKIT</span><span class="tool-chip">EXCEL</span><span class="tool-chip">POWER QUERY</span><span class="tool-chip">DATA MODELING</span><span class="tool-chip">POWER BI</span><span class="tool-chip">DAX</span><span class="tool-chip">HTML</span><span class="tool-chip">CSS</span><span class="tool-chip">JAVASCRIPT</span></div>
+        </article>
+        <div class="download-panel">
+          <p class="eyebrow">SOURCE MATERIAL</p>
+          <a class="download-row" href="assets/docs/W.C.2026.pbix" download><span class="file-mark">PBI</span><span><b>Power BI report</b><small>56 pages · .PBIX</small></span><i>↓</i></a>
+          <a class="download-row" href="assets/docs/World_Cup_2026_Data.xlsx" download><span class="file-mark">XLS</span><span><b>Source workbook</b><small>9 tables · .XLSX</small></span><i>↓</i></a>
+          <div class="source-summary"><b>THE DATA SAYS:</b> 308 goals, 104 fixtures and one clear late-game scoring peak. Full methodology and image credits are below.</div>
+        </div>
+      </div>
+      <div class="analyst-card"><div class="analyst-monogram" aria-hidden="true">MW</div><div class="analyst-copy"><p class="eyebrow">REPORT AUTHOR</p><h3>MINA HANY WAHBA</h3><p>Junior Data Analyst · 8+ dashboard projects · 13 certifications · Mathematics, Mansoura University (2027)</p></div><a class="analyst-cv" href="assets/docs/Mina_Hany_Wahba_CV.pdf" target="_blank" rel="noreferrer"><span>VIEW / DOWNLOAD CV</span><b>↗</b></a></div>
+      <details class="method-details"><summary>Sources &amp; methodology <span>+</span></summary><div class="method-copy"><p>All tournament totals are recalculated from the supplied workbook. Attendance is reported attendance, not a ticket audit. The player list is a scouting watchlist, not a complete roster or a transfer recommendation.</p><p>The workbook has no player minutes, expected goals, progressive actions, contract, salary, injury or transfer-fee data. Per-90 comparisons and valuations are therefore not presented.</p><div class="source-links"><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings" target="_blank" rel="noreferrer">FIFA · final standings ↗</a><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/award-winners" target="_blank" rel="noreferrer">FIFA · awards ↗</a><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/records-broken-set" target="_blank" rel="noreferrer">FIFA · World Cup records ↗</a><a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/overall-tournament-review-spain-argentina" target="_blank" rel="noreferrer">FIFA · final tournament review ↗</a><a href="https://www.guinnessworldrecords.com/news/2026/7/fifa-world-cup-2026-biggest-and-best-records-broken-as-spain-defeat-argentina" target="_blank" rel="noreferrer">Guinness World Records · 2026 ↗</a><a href="assets/data/photo-attribution.csv" download>Player image credits ↓</a><a href="assets/data/flag-sources.csv" download>Flag sources ↓</a></div></div></details>
+    </section>
+
+    <footer class="report-footer">
+      <div class="footer-heading"><span class="brand-ball" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44"/><path d="m50 31 12 9-5 15H43l-5-15 12-9Zm0 0V7m12 33 22-8M57 55l15 18m-29-18L28 73m10-33-22-8m28 26-2 24 8 10 8-10-2-24"/></svg></span><div><p class="eyebrow">FINAL WHISTLE</p><h2>THANK YOU<br><em>FOR WATCHING.</em></h2></div></div>
+      <div class="footer-contact"><div><small>ANALYST</small><b>MINA HANY WAHBA</b></div><div class="footer-links"><a href="https://minahany7.github.io/Wahba/#home" target="_blank" rel="noreferrer">PORTFOLIO ↗</a><a href="https://drive.google.com/drive/folders/1dBVi9weIvx-kTiANj7zGwg05aK8CXbiH" target="_blank" rel="noreferrer">DRIVE ↗</a><a href="https://www.linkedin.com/in/mina-hany-mahrous" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div><div class="footer-phones"><a href="tel:+201070251027">01070251027</a><a href="tel:+201204359373">01204359373</a></div></div>
+      <div class="footer-bottom"><span>INDEPENDENT DATA REPORT · NOT AN OFFICIAL FIFA PRODUCT</span><a href="#top">BACK TO THE TOP ↑</a></div>
+    </footer>
+  </main>
+
+  <div class="stadium-transition" id="stadiumTransition" aria-hidden="true"></div>
+  <dialog class="player-dialog" id="playerDialog" aria-labelledby="dialogName"><button class="dialog-close" id="dialogClose" type="button" aria-label="Close player profile">×</button><div id="dialogContent"></div></dialog>
+</body>
+</html>
